@@ -5,19 +5,19 @@
     /// </summary>
     public class MemoryCell
     {
-        public int Address { get; private set; }
-        public bool Modified { get; set; }
+        public uint Address { get; private set; }
+
         public byte Value { get; set; }
 
-        public MemoryCell(int address)
+        public MemoryCell(uint address, byte value)
         {
             Address = address;
+            Value = value;
         }
 
         public override string ToString()
         {
-            return string.Format("MemoryCell : {0} Value: {1} (modified = {2})",
-                Address.ToString("X8"), Value.ToString("X2"), Modified);
+            return string.Format("{0}: {1})", Address.ToString("X8"), Value.ToString("X2"));
         }
     }
 }

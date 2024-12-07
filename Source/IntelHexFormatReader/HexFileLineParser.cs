@@ -99,11 +99,11 @@ namespace IntelHexFormatReader
             }
         }
 
-        private static int TryParseAddress(string hexAddress)
+        private static uint TryParseAddress(string hexAddress)
         {
             try
             {
-                return Convert.ToInt32(hexAddress, 16);
+                return Convert.ToUInt32(hexAddress, 16);
             }
             catch (Exception ex)
             {
